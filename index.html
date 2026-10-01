@@ -18,6 +18,7 @@
     .featured-output .badge{padding:5px 11px;font-size:13px}
     .research-sec .project .time{display:none}
     .project{scroll-margin-top:24px}.project:target{animation:project-highlight 1.8s ease-out}.project-link-button{flex:0 0 auto;border:1px solid var(--line);border-radius:4px;padding:6px 9px;background:var(--paper);color:var(--accent);font:650 11px/1.2 var(--ui);white-space:nowrap;cursor:pointer}.project-link-button:hover{border-color:#9db3a8;background:var(--accent-soft)}@keyframes project-highlight{0%,35%{background:#e4eee9;box-shadow:0 0 0 14px #e4eee9}100%{background:transparent;box-shadow:0 0 0 0 transparent}}@media(max-width:780px){.project-link-button{margin-top:3px}}
+    .about-copy.single{grid-template-columns:1fr}.about-copy.single p:first-of-type{border-right:0}
   </style>
 </head>
 <body>
@@ -48,7 +49,7 @@
     <section class="sec" id="experience"><div class="section-head side-heading"><div><span class="section-kicker">02</span><h2 id="experience-title"></h2></div></div><div id="experience-list"></div></section>
     <section class="sec research-sec" id="research"><div class="section-head side-heading"><div><span class="section-kicker">03</span><h2 id="research-title"></h2></div></div><div class="projects" id="research-list"></div></section>
     <section class="sec" id="outputs"><div class="section-head side-heading"><div><span class="section-kicker">04</span><h2 id="outputs-title"></h2></div></div><div class="outputs" id="outputs-list"></div></section>
-    <section class="sec" id="evaluation"><div class="section-head side-heading"><div><span class="section-kicker">05</span><h2 id="evaluation-title"></h2></div></div><div class="about-copy"><p id="evaluation-1"></p><p id="evaluation-2"></p></div></section>
+    <section class="sec" id="evaluation"><div class="section-head side-heading"><div><span class="section-kicker">05</span><h2 id="evaluation-title"></h2></div></div><div class="about-copy single"><p id="evaluation-1"></p></div></section>
   </main>
   <footer class="foot"><span id="foot"></span><span>Designed for research, built for the web.</span></footer>
 </div>
@@ -104,8 +105,8 @@ zh.featuredOutput.slug='ucag-p';
 en.featuredOutput.slug='ucag-p';
 zh.evaluationTitle='自我评价';en.evaluationTitle='Self-Assessment';
 zh.nav.push('自我评价');en.nav.push('Self-Assessment');
-zh.evaluation=['研究方向为 VLA、强化学习后训练和真实机器人操作，具备多个项目经验。','工作认真负责，学习能力强，重视团队协作和结果落地。'];
-en.evaluation=['Research focus on VLA, reinforcement-learning post-training, and real-robot manipulation, with hands-on experience across multiple projects.','Responsible and diligent, a fast learner, and committed to teamwork and delivering results.'];
+zh.evaluation=['研究方向为 VLA、强化学习后训练和真实机器人操作，具备多个项目经验。工作认真负责，学习能力强，重视团队协作和结果落地。'];
+en.evaluation=['Research focus on VLA, reinforcement-learning post-training, and real-robot manipulation, with hands-on experience across multiple projects. Responsible and diligent, a fast learner, and committed to teamwork and delivering results.'];
 let lang='zh';
 function comparisonMarkup(m){return`<div class="comparison-wrap"><div class="comparison-grid"><div class="comparison-head comparison-corner">MOTION</div>${m.columns.map(x=>`<div class="comparison-head">${x}</div>`).join('')}${m.rows.map(row=>`<div class="comparison-motion">${row.label}</div>${row.sources.map(src=>`<div class="comparison-cell"><video controls preload="metadata" playsinline><source src="${src}" type="video/mp4"></video></div>`).join('')}`).join('')}</div></div>`}
 function demoGridMarkup(items,columns,compact){return`<div class="demo-grid${columns===3?' demo-grid-three':columns===4?' demo-grid-four':''}${compact?' demo-grid-compact':''}">${items.map(x=>`<div class="demo-cell"><div class="demo-label">${x.label}</div><video controls preload="metadata" playsinline><source src="${x.src}" type="video/mp4"></video></div>`).join('')}</div>`}
